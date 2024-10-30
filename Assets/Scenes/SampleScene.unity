@@ -123,6 +123,7 @@ NavMeshSettings:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &235443780
 =======
 --- !u!1 &615697351
@@ -276,6 +277,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of a5f24a5 (added sphere)
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,7 +578,10 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 1883846530}
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 235443784}
 =======
   - {fileID: 615697355}
 >>>>>>> 81ac729cc1d177da13414c285527f940c67fa5e0
+=======
+>>>>>>> parent of a5f24a5 (added sphere)
