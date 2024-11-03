@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed;
     private Rigidbody playerRb;
+    public float jumpForce;
+    private bool grounded = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,5 +19,10 @@ public class PlayerMovement : MonoBehaviour
     {
         float move = Input.GetAxis("Horizontal");
         playerRb.AddForce(Vector3.right * speed * move);
+        if (Input.GetKeyDown("space")&&grounded==true)
+        {
+            playerRb.AddForce(Vector3.up * jumpForce);
+            grounded = false;
+        }
     }
 }
