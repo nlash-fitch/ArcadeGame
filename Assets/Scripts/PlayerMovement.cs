@@ -16,6 +16,6 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         float move = Input.GetAxis("Horizontal");
-        playerRb.AddForce(speed * move);
+        playerRb.AddForce(Vector3.right * speed * move);
     }
 }
