@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
+        Debug.Log(playerRb);
     }
 
     // Update is called once per frame
@@ -29,17 +30,26 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision collisionInfo)
+    void OnCollisionEnter(Collision collision)
     {
-        ContactPoint contact = collisionInfo.GetContact(0);
+        ContactPoint contact = collision.GetContact(0);
         
-        if ((collisionInfo.gameObject.tag == "Floor") && (contact.thisCollider == feet))
+        if ((collision.gameObject.tag == "Floor") && (contact.thisCollider == feet))
         {
             grounded = true;
         }
     }
 
-    
-    
-    
+    /*
+    private void OnCollisionExit(Collision collision)
+    {
+        ContactPoint contact = collision.GetContact(0);
+
+        if ((collision.gameObject.tag == "Floor") && (contact.thisCollider == feet))
+        {
+            grounded = false;
+        }
+    }
+    */
+
 }
