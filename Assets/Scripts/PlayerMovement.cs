@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody playerRb;
     public float jumpForce;
     private bool grounded = true;
+
+    public SphereCollider feet;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,10 +21,25 @@ public class PlayerMovement : MonoBehaviour
     {
         float move = Input.GetAxis("Horizontal");
         playerRb.AddForce(Vector3.right * speed * move);
+
         if (Input.GetKeyDown("space")&&grounded==true)
         {
             playerRb.AddForce(Vector3.up * jumpForce);
             grounded = false;
         }
     }
+
+    void OnCollisionEnter(Collision collisionInfo)
+    {
+        ContactPoint contact = collisionInfo.GetContact(0);
+        
+        if ((collisionInfo.gameObject.tag == "Floor") && (contact.thisCollider == feet))
+        {
+            grounded = true;
+        }
+    }
+
+    
+    
+    
 }
