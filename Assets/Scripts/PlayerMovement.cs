@@ -9,7 +9,8 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce;
     private bool grounded = true;
 
-    public SphereCollider feet;
+    public SphereCollider foot1;
+    public SphereCollider foot2;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
     {
         ContactPoint contact = collision.GetContact(0);
         
-        if ((collision.gameObject.tag == "Floor") && (contact.thisCollider == feet))
+        if ((collision.gameObject.tag == "Floor") && (contact.thisCollider == foot1 || contact.thisCollider == foot2))
         {
             grounded = true;
         }
