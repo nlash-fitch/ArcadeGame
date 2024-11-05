@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (collision.gameObject.tag == "hazard")
         {
-
+            
         }
     }
 
