@@ -38,6 +38,10 @@ public class PlayerMovement : MonoBehaviour
         {
             grounded = true;
         }
+        if (collision.gameObject.tag == "hazard")
+        {
+
+        }
     }
 
     /*
