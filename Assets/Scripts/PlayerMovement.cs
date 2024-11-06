@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed;
+    private float horizontalInput;
+    private float speed = 4;
     private Rigidbody playerRb;
     public float jumpForce;
     private bool grounded = true;
@@ -20,8 +21,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float move = Input.GetAxis("Horizontal");
-        playerRb.AddForce(Vector3.right * speed * move);
+        horizontalInput = Input.GetAxis("Horizontal");
+        transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
 
         if (Input.GetKeyDown("space")&&grounded==true)
         {
