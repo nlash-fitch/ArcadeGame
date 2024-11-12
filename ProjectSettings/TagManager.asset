@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Floor
   - hazard
+  - Arrow
   layers:
   - Default
   - TransparentFX
