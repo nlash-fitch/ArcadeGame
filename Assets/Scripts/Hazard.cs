@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Hazard : MonoBehaviour
 {
+    private GameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,15 @@ public class Hazard : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (gameObject.CompareTag("Arrow"))
+        {
+            Destroy(gameObject);
+        }
+
+        gameManager.UpdateLives();
     }
 }

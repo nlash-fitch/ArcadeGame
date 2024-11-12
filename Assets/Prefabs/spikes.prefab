@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: spikes
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0534a98051b214fae9c8569c196cfa24, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -75,6 +79,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0534a98051b214fae9c8569c196cfa24, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8650919841968332862}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0534a98051b214fae9c8569c196cfa24, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -4423457773235264586}
   m_SourcePrefab: {fileID: 100100000, guid: 0534a98051b214fae9c8569c196cfa24, type: 3}
 --- !u!1 &2911880610087183122 stripped
 GameObject:
@@ -96,9 +103,21 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.13605973, y: 0.045356378, z: 0.04458423}
   m_Center: {x: -0.000000014901161, y: 0.025542878, z: -0.000105820596}
+--- !u!114 &-4423457773235264586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2911880610087183122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccc065a9d8c36514db07ed753c1ea2bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
