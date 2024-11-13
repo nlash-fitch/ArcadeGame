@@ -28,7 +28,7 @@ public class ArrowSpawn : MonoBehaviour
         {
             yield return new WaitForSeconds(spawnRate);
             Debug.Log(transform.position);
-            Instantiate(arrowPrefab, transform.position, arrowPrefab.transform.rotation);
+            Instantiate(arrowPrefab, transform.position, transform.rotation);
         }
     }
 }
