@@ -12,35 +12,41 @@ public class PlayerMovement : MonoBehaviour
 
     public SphereCollider foot1;
     public SphereCollider foot2;
+
+    private GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (gameObject.name == "player 1")
+        if (gameManager.isGameActive)
         {
-            horizontalInput = Input.GetAxis("Horizontal2");
-        }
-        else
-        {
-            horizontalInput = Input.GetAxis("Horizontal");
-        }
-       
-        transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+            if (gameObject.name == "player 1")
+            {
+                horizontalInput = Input.GetAxis("Horizontal2");
+            }
+            else
+            {
+                horizontalInput = Input.GetAxis("Horizontal");
+            }
 
-        if (Input.GetKeyDown("space")&&grounded==true && gameObject.name == "player 1")
-        {
-            playerRb.AddForce(Vector3.up * jumpForce);
-            grounded = false;
-        }
-        else if (Input.GetKeyDown("4") && grounded == true && gameObject.name == "player 2")
-        {
-            playerRb.AddForce(Vector3.up * jumpForce);
-            grounded = false;
+            transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+
+            if (Input.GetKeyDown("space") && grounded == true && gameObject.name == "player 1")
+            {
+                playerRb.AddForce(Vector3.up * jumpForce);
+                grounded = false;
+            }
+            else if (Input.GetKeyDown("4") && grounded == true && gameObject.name == "player 2")
+            {
+                playerRb.AddForce(Vector3.up * jumpForce);
+                grounded = false;
+            }
         }
     }
 
