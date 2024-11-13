@@ -19,12 +19,12 @@ public class TowerSpawn : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (gameManager.isGameActive)
         {
             timer++;
-            if (timer >= 600)
+            if (timer >= 100)
             {
                 int rand = Random.Range(0, towers.Length);
                 Vector3 move = new Vector3(towerAskewXY[0, rand], distance + towerAskewXY[1, rand], 0);
