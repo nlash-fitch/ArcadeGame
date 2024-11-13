@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 087b4506adf034e9f896bf9abbd8c2c1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.85
+      value: 8.24151
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 087b4506adf034e9f896bf9abbd8c2c1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 11.801922
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 087b4506adf034e9f896bf9abbd8c2c1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.46
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 087b4506adf034e9f896bf9abbd8c2c1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -67,6 +67,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 087b4506adf034e9f896bf9abbd8c2c1, type: 3}
       propertyPath: m_Name
       value: arrow_launcher
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 087b4506adf034e9f896bf9abbd8c2c1, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

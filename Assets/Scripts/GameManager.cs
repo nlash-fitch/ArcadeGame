@@ -17,13 +17,13 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Press enter to start game (does NOT work yet)
         
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Press enter to start game
         if (Input.GetKeyDown("return")&&isGameActive==false)
         {
             Debug.Log("A");
