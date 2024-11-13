@@ -1929,6 +1929,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4714230013303223126, guid: f4e8d9083af5edc46ad8345ce84ac081, type: 3}
+      propertyPath: towers.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4714230013303223126, guid: f4e8d9083af5edc46ad8345ce84ac081, type: 3}
+      propertyPath: towers.Array.data[2]
+      value: 
+      objectReference: {fileID: 831712031018432847, guid: 1a3dbed60c2bd45afa7bc437ea29b2f6, type: 3}
     - target: {fileID: 8649127478626759010, guid: f4e8d9083af5edc46ad8345ce84ac081, type: 3}
       propertyPath: m_Name
       value: TowerSpawner

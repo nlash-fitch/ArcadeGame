@@ -49,5 +49,6 @@ MonoBehaviour:
   towers:
   - {fileID: 3624673485394537175, guid: 599a6883462b24eefaed86ca9e5dd7d3, type: 3}
   - {fileID: 6350266576279932539, guid: 8de519465c67743b580acc50795a37c6, type: 3}
+  - {fileID: 831712031018432847, guid: 1a3dbed60c2bd45afa7bc437ea29b2f6, type: 3}
   timer: 0
   distance: 20.02971
