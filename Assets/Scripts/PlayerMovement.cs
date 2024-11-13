@@ -21,7 +21,15 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
+        if (gameObject.name == "player 1")
+        {
+            horizontalInput = Input.GetAxis("Horizontal");
+        }
+        else
+        {
+            horizontalInput = Input.GetAxis("Horizontal2");
+        }
+       
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
 
         if (Input.GetKeyDown("space")&&grounded==true)
