@@ -7,7 +7,7 @@ public class ArrowSpawn : MonoBehaviour
     public GameObject arrowPrefab;
     private GameManager gameManager;
 
-    public float spawnRate = 1.5f;
+    public float spawnRate = 2.0f;
 
     // Start is called before the first frame update
     void Start()
