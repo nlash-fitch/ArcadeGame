@@ -79,6 +79,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void UpdateScore()
+    {
+        p1ScoreText.text = "Score: " + p1Score;
+        p2ScoreText.text = "Score: " + p2Score;
+    }
+
     public void GameOver()
     {
         restartText.gameObject.SetActive(true);
