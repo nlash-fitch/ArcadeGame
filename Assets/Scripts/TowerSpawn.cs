@@ -8,7 +8,7 @@ public class TowerSpawn : MonoBehaviour
     public float spawnX;
     public GameObject[] towers;
     public int timer;
-    public float distance;
+    public float distance= 20.02971f;
     // Start is called before the first frame update
     void Start()
     {
