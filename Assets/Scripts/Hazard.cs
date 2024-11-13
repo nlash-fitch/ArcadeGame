@@ -31,6 +31,7 @@ public class Hazard : MonoBehaviour
         gameManager.UpdateLives();
 
         timer += Time.deltaTime;
+        Debug.Log(other);
         if (timer >= cooldown)
         {
             
