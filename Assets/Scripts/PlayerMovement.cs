@@ -23,16 +23,21 @@ public class PlayerMovement : MonoBehaviour
     {
         if (gameObject.name == "player 1")
         {
-            horizontalInput = Input.GetAxis("Horizontal");
+            horizontalInput = Input.GetAxis("Horizontal2");
         }
         else
         {
-            horizontalInput = Input.GetAxis("Horizontal2");
+            horizontalInput = Input.GetAxis("Horizontal");
         }
        
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
 
-        if (Input.GetKeyDown("space")&&grounded==true)
+        if (Input.GetKeyDown("space")&&grounded==true && gameObject.name == "player 1")
+        {
+            playerRb.AddForce(Vector3.up * jumpForce);
+            grounded = false;
+        }
+        else if (Input.GetKeyDown("4") && grounded == true && gameObject.name == "player 2")
         {
             playerRb.AddForce(Vector3.up * jumpForce);
             grounded = false;
