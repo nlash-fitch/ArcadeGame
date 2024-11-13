@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI restartText;
     public GameObject titleScreen;
     public bool isGameActive;
+    public bool gameOver;
     private int lives;
 
     // Start is called before the first frame update
@@ -24,7 +25,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         // Press enter to start game
-        if (Input.GetKeyDown("return")&&isGameActive==false)
+        if (Input.GetKeyDown("return")&&isGameActive==false&&gameOver==false)
         {
             Debug.Log("A");
             StartGame();
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         isGameActive = true;
+        gameOver = false;
         lives = 5;
 
         titleScreen.gameObject.SetActive(false);
@@ -65,10 +67,14 @@ public class GameManager : MonoBehaviour
         restartText.gameObject.SetActive(true);
         gameOverText.gameObject.SetActive(true);
         isGameActive = false;
+        gameOver = true;
     }
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        if (Input.GetKeyDown("return") && gameOver == true)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }
