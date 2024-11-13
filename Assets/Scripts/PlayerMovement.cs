@@ -13,6 +13,10 @@ public class PlayerMovement : MonoBehaviour
     public SphereCollider foot1;
     public SphereCollider foot2;
 
+    private float score;
+    private int scorePenalty;
+    private int displayScore;
+
     private GameManager gameManager;
     // Start is called before the first frame update
     void Start()
@@ -48,6 +52,11 @@ public class PlayerMovement : MonoBehaviour
                 grounded = false;
             }
         }
+        score = transform.y;
+        if (score-(20*scorePenalty)>= displayScore)
+        {
+            displayScore=Mathf.Floor(score);
+        }
     }
 
     void OnCollisionEnter(Collision collision)
@@ -60,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (collision.gameObject.tag == "hazard")
         {
-            
+            scorePenalty++;
         }
     }
 
