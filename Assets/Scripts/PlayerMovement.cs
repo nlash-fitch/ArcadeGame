@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
         //Debug.Log(score);
         if (score-(20*scorePenalty)>= displayScore)
         {
-            displayScore=(int)Mathf.Floor(score);
+            displayScore=(int)Mathf.Floor(score) - (20 * scorePenalty);
         }
     }
     public int getScore()
