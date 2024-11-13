@@ -35,6 +35,8 @@ public class GameManager : MonoBehaviour
         {
             Application.Quit();
         }
+
+        RestartGame();
     }
 
     // Start game, disable title screen, and set lives to 5

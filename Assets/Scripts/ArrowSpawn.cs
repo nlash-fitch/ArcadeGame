@@ -27,7 +27,7 @@ public class ArrowSpawn : MonoBehaviour
         while (gameManager.isGameActive)
         {
             yield return new WaitForSeconds(spawnRate);
-            Debug.Log(transform.position);
+            //Debug.Log(transform.position);
             Instantiate(arrowPrefab, transform.position, transform.rotation);
         }
     }
