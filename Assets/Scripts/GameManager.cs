@@ -52,6 +52,8 @@ public class GameManager : MonoBehaviour
             p1Score=p1.getScore();
             p2Score=p2.getScore();
         }
+
+        UpdateScore();
     }
 
     // Start game, disable title screen, and set lives to 5
