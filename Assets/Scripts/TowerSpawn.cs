@@ -9,7 +9,7 @@ public class TowerSpawn : MonoBehaviour
     public GameObject[] towers;
     public int timer;
     public float distance = 20.02971f;
-    public float[,] towerAskewXY = { { -1.13f, 6.56f },{ 0.39f, 8.62f } };
+    public float[,] towerAskewXY = { { -1.13f, 6.56f },{ 0.39f, 0.43f } };
     // Start is called before the first frame update
     void Start()
     {
