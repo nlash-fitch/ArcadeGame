@@ -15,10 +15,17 @@ public class GameManager : MonoBehaviour
     public bool gameOver;
     private int lives;
 
+    public PlayerMovement p1;
+    public PlayerMovement p2;
+    public int p1Score;
+    public int p2Score;
+
     // Start is called before the first frame update
     void Start()
     {
         Cursor.visible = false;
+        p1  = GameObject.Find("player 1").GetComponent<PlayerMovement>();
+        p2  = GameObject.Find("player 2").GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
@@ -37,6 +44,12 @@ public class GameManager : MonoBehaviour
         }
 
         RestartGame();
+
+        if (isGameActive == true)
+        {
+            p1Score=p1.getScore();
+            p2Score=p2.getScore();
+        }
     }
 
     // Start game, disable title screen, and set lives to 5

@@ -13,9 +13,9 @@ public class PlayerMovement : MonoBehaviour
     public SphereCollider foot1;
     public SphereCollider foot2;
 
-    private float score;
-    private int scorePenalty;
-    private int displayScore;
+    public float score;
+    public int scorePenalty;
+    public int displayScore;
 
     private GameManager gameManager;
     // Start is called before the first frame update
@@ -58,7 +58,10 @@ public class PlayerMovement : MonoBehaviour
             displayScore=Mathf.Floor(score);
         }
     }
-
+    public int getScore()
+    {
+        return displayScore;
+    }
     void OnCollisionEnter(Collision collision)
     {
         ContactPoint contact = collision.GetContact(0);
