@@ -6,6 +6,9 @@ public class Hazard : MonoBehaviour
 {
     private GameManager gameManager;
 
+    public float cooldown = 1.0f;
+    public float timer = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +28,11 @@ public class Hazard : MonoBehaviour
             Destroy(gameObject);
         }
 
-        gameManager.UpdateLives();
+        timer += Time.deltaTime;
+        if (timer >= cooldown)
+        {
+            gameManager.UpdateLives();
+            timer = 0;
+        }
     }
 }
