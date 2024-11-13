@@ -52,10 +52,11 @@ public class PlayerMovement : MonoBehaviour
                 grounded = false;
             }
         }
-        score = transform.y;
+        score = transform.position.y + 3;
+        //Debug.Log(score);
         if (score-(20*scorePenalty)>= displayScore)
         {
-            displayScore=Mathf.Floor(score);
+            displayScore=(int)Mathf.Floor(score);
         }
     }
     public int getScore()
