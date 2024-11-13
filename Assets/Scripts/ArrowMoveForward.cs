@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ArrowMoveForward : MonoBehaviour
 {
-    private float speed = 3.0f;
+    private float speed = 5.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +16,6 @@ public class ArrowMoveForward : MonoBehaviour
     void Update()
     {
         // Move arrow forward
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        transform.Translate(Vector3.right * speed * Time.deltaTime);
     }
 }
