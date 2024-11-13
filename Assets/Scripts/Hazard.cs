@@ -16,9 +16,9 @@ public class Hazard : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        timer -= 0.02f;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -28,14 +28,15 @@ public class Hazard : MonoBehaviour
             Destroy(gameObject);
         }
 
-        gameManager.UpdateLives();
+        
 
-        timer += Time.deltaTime;
-        Debug.Log(other);
-        if (timer >= cooldown)
+        
+
+        if (timer <= 0)
         {
-            
-            timer = 0;
+            gameManager.UpdateLives();
+            Debug.Log(other);
+            timer = 1;
         }
     }
 }
