@@ -171,6 +171,7 @@ MonoBehaviour:
   restartText: {fileID: 751312255}
   titleScreen: {fileID: 1242944516}
   isGameActive: 0
+  gameOver: 0
 --- !u!1001 &409336037
 PrefabInstance:
   m_ObjectHideFlags: 0
