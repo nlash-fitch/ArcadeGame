@@ -28,10 +28,12 @@ public class Hazard : MonoBehaviour
             Destroy(gameObject);
         }
 
+        gameManager.UpdateLives();
+
         timer += Time.deltaTime;
         if (timer >= cooldown)
         {
-            gameManager.UpdateLives();
+            
             timer = 0;
         }
     }
