@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4586343714807030189}
+  - component: {fileID: 4512681587729371728}
   m_Layer: 0
   m_Name: tower_medium
   m_TagString: Untagged
@@ -52,6 +53,27 @@ Transform:
   - {fileID: 7419332027110413727}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4512681587729371728
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6350266576279932539}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.5288544, y: 24.792564, z: 1.2031565}
+  m_Center: {x: -6.5367355, y: 1.0673943, z: 12.994156}
 --- !u!1001 &268375081210669948
 PrefabInstance:
   m_ObjectHideFlags: 0
