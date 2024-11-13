@@ -12,7 +12,7 @@ public class ArrowSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
         StartCoroutine("SpawnArrow");
     }
 
@@ -27,6 +27,7 @@ public class ArrowSpawn : MonoBehaviour
         while (gameManager.isGameActive)
         {
             yield return new WaitForSeconds(spawnRate);
+            Debug.Log(transform.position);
             Instantiate(arrowPrefab, transform.position, arrowPrefab.transform.rotation);
         }
     }
