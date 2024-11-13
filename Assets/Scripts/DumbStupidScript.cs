@@ -7,7 +7,7 @@ public class DumbStupidScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(gameObject.GetComponent<BoxCollider>().bounds.size.y);
+        //Debug.Log(gameObject.GetComponent<BoxCollider>().bounds.size.y);
     }
 
     // Update is called once per frame
