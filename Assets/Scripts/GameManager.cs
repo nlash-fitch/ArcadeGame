@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("return"))
+        if (Input.GetKeyDown("return")&&isGameActive==false)
         {
             Debug.Log("A");
             StartGame();
