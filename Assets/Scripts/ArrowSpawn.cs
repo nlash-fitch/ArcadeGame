@@ -12,13 +12,14 @@ public class ArrowSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        //gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        StartCoroutine("SpawnArrow");
     }
 
     // Update is called once per frame
     void Update()
     {
-        SpawnArrow();
+        
     }
 
     IEnumerator SpawnArrow()
