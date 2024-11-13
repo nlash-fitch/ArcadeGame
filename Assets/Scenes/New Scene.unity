@@ -169,9 +169,15 @@ MonoBehaviour:
   livesText: {fileID: 1495881930}
   gameOverText: {fileID: 1403600562}
   restartText: {fileID: 751312255}
+  p1ScoreText: {fileID: 495971438}
+  p2ScoreText: {fileID: 1491075066}
   titleScreen: {fileID: 1242944516}
   isGameActive: 0
   gameOver: 0
+  p1: {fileID: 0}
+  p2: {fileID: 0}
+  p1Score: 0
+  p2Score: 0
 --- !u!1001 &409336037
 PrefabInstance:
   m_ObjectHideFlags: 0
