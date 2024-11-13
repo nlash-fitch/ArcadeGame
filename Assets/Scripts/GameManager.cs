@@ -18,16 +18,17 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         // Press enter to start game (does NOT work yet)
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            StartGame();
-        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKeyDown("return"))
+        {
+            Debug.Log("A");
+            StartGame();
+        }
     }
 
     // Start game, disable title screen, and set lives to 5
